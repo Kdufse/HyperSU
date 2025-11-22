@@ -1,18 +1,18 @@
 # FAQ
 
-## Apa itu APatch?
-APatch adalah solusi root yang mirip dengan Magisk atau KernelSU yang menyatukan yang terbaik dari keduanya.
+## Apa itu HyperSU?
+HyperSU adalah solusi root yang mirip dengan Magisk atau KernelSU yang menyatukan yang terbaik dari keduanya.
 Ia menggabungkan metode instalasi Magisk yang mudah dan praktis melalui `boot.img` dengan kemampuan patching kernel KernelSU yang hebat.
 
-## Apa perbedaan antara APatch dan Magisk?
+## Apa perbedaan antara HyperSU dan Magisk?
 
-- Magisk memodifikasi sistem init dengan patch di ramdisk boot image Anda, sementara APatch menambal kernel secara langsung.
+- Magisk memodifikasi sistem init dengan patch di ramdisk boot image Anda, sementara HyperSU menambal kernel secara langsung.
 
-## APatch vs KernelSU
-- KernelSU memerlukan kode sumber untuk kernel perangkat Anda yang tidak selalu disediakan oleh OEM. APatch hanya berfungsi dengan `boot.img` bawaan Anda.
+## HyperSU vs KernelSU
+- KernelSU memerlukan kode sumber untuk kernel perangkat Anda yang tidak selalu disediakan oleh OEM. HyperSU hanya berfungsi dengan `boot.img` bawaan Anda.
 
-## APatch vs Magisk, KernelSU
-- APatch memungkinkan Anda untuk secara opsional tidak memodifikasi SELinux, ini berarti bahwa utas APP dapat di-root, libsu dan IPC tidak diperlukan.
+## HyperSU vs Magisk, KernelSU
+- HyperSU memungkinkan Anda untuk secara opsional tidak memodifikasi SELinux, ini berarti bahwa utas APP dapat di-root, libsu dan IPC tidak diperlukan.
 
 - **Modul Patch Kernel** disediakan.
 
@@ -22,9 +22,9 @@ Selain itu, KPM menyediakan kemampuan untuk melakukan inline-hook, syscall-table
 
 Untuk informasi selengkapnya, lihat [Cara menulis KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/module.md)
 
-## Hubungan antara APatch dan KernelPatch
+## Hubungan antara HyperSU dan KernelPatch
 
-APatch bergantung pada KernelPatch, mewarisi semua kemampuannya, dan telah diperluas.
+HyperSU bergantung pada KernelPatch, mewarisi semua kemampuannya, dan telah diperluas.
 
 Anda hanya dapat menginstal KernelPatch, tetapi ini tidak akan memungkinkan Anda untuk menggunakan modul Magisk
 
@@ -41,4 +41,4 @@ Ini memungkinkan Anda untuk melakukan root pada thread Android dalam konteks apl
 
 Ini sangat praktis.
 
-- Selain itu, APatch secara langsung menggunakan magiskpolicy untuk menyediakan dukungan SELinux tambahan.
+- Selain itu, HyperSU secara langsung menggunakan magiskpolicy untuk menyediakan dukungan SELinux tambahan.

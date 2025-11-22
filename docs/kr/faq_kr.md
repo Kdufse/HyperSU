@@ -1,21 +1,21 @@
 # FAQ
 
 
-## APatch가 뭔가요?
-APatch는 Magisk와 KernelSU와 유사한 루팅툴로, 두 가지의 장점을 결합하였습니다.
+## HyperSU가 뭔가요?
+HyperSU는 Magisk와 KernelSU와 유사한 루팅툴로, 두 가지의 장점을 결합하였습니다.
 `boot.img`을 통해 설치하는 Magisk의 편리하고 간편한 방법과 강력한 커널 패치 기능을 제공하는 KernelSU를 결합하였습니다.
 
 
-## APatch와 Magisk의 차이점은 무엇인가요?
-- Magisk는 부트 이미지의 램디스크에 패치를 적용하여 초기 시스템을 수정하는 반면, APatch는 커널을 직접 패치합니다.
+## HyperSU와 Magisk의 차이점은 무엇인가요?
+- Magisk는 부트 이미지의 램디스크에 패치를 적용하여 초기 시스템을 수정하는 반면, HyperSU는 커널을 직접 패치합니다.
 
 
-## APatch vs KernelSU
-- KernelSU는 기기의 커널 소스 코드가 필요하지만 OEM에서 항상 제공하지는 않습니다. 반면, APatch는 단지 여러분의 기본 `boot.img`만으로 작동합니다.
+## HyperSU vs KernelSU
+- KernelSU는 기기의 커널 소스 코드가 필요하지만 OEM에서 항상 제공하지는 않습니다. 반면, HyperSU는 단지 여러분의 기본 `boot.img`만으로 작동합니다.
 
 
-## APatch vs Magisk, KernelSU
-- APatch는 선택적으로 SELinux를 수정하지 않을 수 있어, APP 스레드를 루팅할 수 있으며, libsu와 IPC가 필요하지 않습니다.
+## HyperSU vs Magisk, KernelSU
+- HyperSU는 선택적으로 SELinux를 수정하지 않을 수 있어, APP 스레드를 루팅할 수 있으며, libsu와 IPC가 필요하지 않습니다.
 - **커널 패치 모듈**을 제공합니다..
 
 
@@ -27,9 +27,9 @@ APatch는 Magisk와 KernelSU와 유사한 루팅툴로, 두 가지의 장점을 
 자세한 정보는 [KPM 작성 방법](https://github.com/bmax121/KernelPatch/blob/main/doc/module.md)에서 확인하세요.
 
 
-## APatch와 KernelPatch의 관계
+## HyperSU와 KernelPatch의 관계
 
-APatch는 KernelPatch에 의존하며, 모든 기능을 상속받고 확장되었습니다.
+HyperSU는 KernelPatch에 의존하며, 모든 기능을 상속받고 확장되었습니다.
 
 KernelPatch만 설치할 수도 있지만, 이 경우 Magisk 모듈을 사용할 수 없습니다.
 
@@ -46,4 +46,4 @@ KernelPatch는 사용자 공간의 앱 및 프로그램에 모든 기능을 제�
 - KernelPatch는 SELinux 컨텍스트를 수정하지 않고 SELinux를 우회하는 훅을 사용합니다.
   이를 통해 앱 컨텍스트 내에서 안드로이드 스레드를 루팅할 수 있으며, 새 프로세스를 시작하고 IPC를 수행하기 위해 libsu를 사용할 필요가 없습니다.
   이 방법은 매우 편리합니다.
-- 또한, APatch는 추가적인 SELinux 지원을 제공하기 위해 직접 magiskpolicy를 활용합니다.
+- 또한, HyperSU는 추가적인 SELinux 지원을 제공하기 위해 직접 magiskpolicy를 활용합니다.

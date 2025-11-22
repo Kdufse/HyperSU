@@ -1,21 +1,21 @@
 # TSS
 
 
-## APatch nədir?
-APatch, hər ikisinin ən yaxşısını birləşdirən Magisk və ya KernelSU-ya bənzər kök həllidir.
+## HyperSU nədir?
+HyperSU, hər ikisinin ən yaxşısını birləşdirən Magisk və ya KernelSU-ya bənzər kök həllidir.
 O, Magisk-in `boot.img` vasitəsilə rahat və asan quraşdırma metodunu KernelSU-nun güclü nüvə yamaqlamaq qabiliyyətləri ilə birləşdirir.
 
 
-## APatch və Magisk arasındakı fərq nədir?
-- Magisk başlanğıc sistemini nüvə imajınızın ramdiskindəki yamaq ilə dəyişdirir, APatch isə nüvəni birbaşa yamaqlayır.
+## HyperSU və Magisk arasındakı fərq nədir?
+- Magisk başlanğıc sistemini nüvə imajınızın ramdiskindəki yamaq ilə dəyişdirir, HyperSU isə nüvəni birbaşa yamaqlayır.
 
 
-## APatch vs KernelSU
+## HyperSU vs KernelSU
 - KernelSU cihazınızın nüvəsi üçün həmişə OEM tərəfindən təmin edilməyən mənbə kodunu tələb edir. APAtch yalnız sizin stok `boot.img` ilə işləyir.
 
 
-## APatch vs Magisk, KernelSU
-- APatch istəyə bağlı olaraq SELinux-u dəyişdirməməyə imkan verir, bu o deməkdir ki, Android proqramı köklənə bilər, libsu və IPC zəruri deyil.
+## HyperSU vs Magisk, KernelSU
+- HyperSU istəyə bağlı olaraq SELinux-u dəyişdirməməyə imkan verir, bu o deməkdir ki, Android proqramı köklənə bilər, libsu və IPC zəruri deyil.
 - **Nüvə Yamaq Modulu** təmin edilmişdir.
 
 
@@ -27,9 +27,9 @@ Bəzi kodlar Yüklənəbilən Nüvə Modulları (LKM) kimi Nüvə Məkanında i�
 Ətraflı məlumat üçün [KPM necə yazılır](https://github.com/bmax121/KernelPatch/blob/main/doc/module.md) bölməsinə baxın.
 
 
-## APatch və NüvəYamağı arasındakı əlaqə
+## HyperSU və NüvəYamağı arasındakı əlaqə
 
-APatch NüvəYamağından asılıdır, onun bütün imkanlarını miras alır və genişləndirilib.
+HyperSU NüvəYamağından asılıdır, onun bütün imkanlarını miras alır və genişləndirilib.
 
 Siz yalnızca NüvəYamağı quraşdıra bilərsiniz, lakin bu, Magisk modullarından istifadə etməyə imkan verməyəcək və superistifadəçi idarəçiliyindən istifadə etmək üçün AndroidYamağını quraşdırmalı və sonra onu silməlisiniz.
 
@@ -46,4 +46,4 @@ Tətbiq/proqram **SuperZəngi** işə salmağa çalışdıqda, o, **SuperAçar**
 - NüvəYamağı SELinux kontekstini dəyişdirmir və çəngəl vasitəsilə SELinux-dan yan keçir.
   Bu, yeni prosesə başlamaq və sonra IPC yerinə yetirmək üçün libsu-dan istifadə etmədən proqram kontekstində Android mövzusunu kökləməyə imkan verir.
   Bu çox rahatdır.
-- Bundan əlavə, APatch əlavə SELinux dəstəyi təmin etmək üçün birbaşa magiskpolicy-dən istifadə edir.
+- Bundan əlavə, HyperSU əlavə SELinux dəstəyi təmin etmək üçün birbaşa magiskpolicy-dən istifadə edir.

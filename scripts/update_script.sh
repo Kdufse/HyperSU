@@ -1,5 +1,5 @@
 ######################
-# APatch Empty script
+# HyperSU Empty script
 # Check update-binary
 ######################
 

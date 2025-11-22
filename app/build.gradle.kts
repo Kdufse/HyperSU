@@ -28,7 +28,7 @@ apksign {
 }
 
 android {
-    namespace = "me.bmax.apatch"
+    namespace = "me.kdufse.hypersu"
 
     buildTypes {
         debug {

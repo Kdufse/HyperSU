@@ -8,7 +8,7 @@ use log::LevelFilter;
 
 use crate::{defs, event, module, supercall, utils};
 
-/// APatch cli
+/// HyperSU cli
 #[derive(Parser, Debug)]
 #[command(author, version = defs::VERSION_CODE, about, long_about = None)]
 struct Args {
@@ -25,7 +25,7 @@ struct Args {
 
 #[derive(clap::Subcommand, Debug)]
 enum Commands {
-    /// Manage APatch modules
+    /// Manage HyperSU modules
     Module {
         #[command(subcommand)]
         command: Module,

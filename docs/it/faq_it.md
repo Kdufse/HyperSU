@@ -1,18 +1,18 @@
 # Domande frequenti
 
-## Cos'è APatch
+## Cos'è HyperSU
 
-APatch è una soluzione per il root simile a Magisk o KernelSU, ma offre funzionalità aggiuntive.
+HyperSU è una soluzione per il root simile a Magisk o KernelSU, ma offre funzionalità aggiuntive.
 
-## APatch vs Magisk
+## HyperSU vs Magisk
 
-- Magisk modifica l'init, mentre APatch patcha il kernel Linux.
+- Magisk modifica l'init, mentre HyperSU patcha il kernel Linux.
 
-## APatch vs KernelSU
+## HyperSU vs KernelSU
 
-- KernelSU richiede il codice sorgente del kernel, mentre per APatch è sufficiente solo il file boot.img.
+- KernelSU richiede il codice sorgente del kernel, mentre per HyperSU è sufficiente solo il file boot.img.
 
-## APatch vs Magisk, KerenlSU
+## HyperSU vs Magisk, KerenlSU
 
 - Opzionalmente, non modifica SELinux.
 - Consente di ottenere i permessi di root nel contesto dell'app Android, senza la necessità di libsu e IPC.
@@ -26,9 +26,9 @@ Inoltre, KPM fornisce la possibilità di effettuare inline-hook e syscall-table-
 
 [Come scrivere un KPM](https://github.com/bmax121/KernelPatch/blob/main/doc/module.md)
 
-## Relazione tra APatch e KernelPatch
+## Relazione tra HyperSU e KernelPatch
 
-APatch dipende da KernelPatch, eredita tutte le sue capacità ed è stato ampliato.
+HyperSU dipende da KernelPatch, eredita tutte le sue capacità ed è stato ampliato.
 
 Puoi installare solo KernelPatch, ma ciò non consentirà l'uso dei moduli Magisk.
 Per gestire i permessi di root, è necessario installare AndroidPatch e successivamente disinstallarlo.
@@ -46,5 +46,5 @@ SuperCall può essere invocato con successo solo quando la SuperKey è corretta;
 - KernelPatch non modifica il contesto SELinux e bypassa SELinux tramite hook,  
   consentendo di ottenere i privilegi di root in un thread Android all'interno del contesto dell'app senza la necessità di utilizzare libsu per avviare un nuovo processo e quindi eseguire IPC.
   Questo è molto conveniente.
-- Inoltre, APatch utilizza direttamente magiskpolicy per fornire ulteriore supporto SELinux.  
+- Inoltre, HyperSU utilizza direttamente magiskpolicy per fornire ulteriore supporto SELinux.  
   Tuttavia, solo questo sarà rilevato come Magisk. Chiunque sia interessato può cercare di bypassarlo; il problema è già abbastanza chiaro.

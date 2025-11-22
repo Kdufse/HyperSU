@@ -1,18 +1,18 @@
 # SSS
 
-## APatch nedir?
+## HyperSU nedir?
 
-APatch, Magisk veya KernelSU benzeri ve her ikisinin de en iyi yönlerini birleştiren bir root çözümdür. Magisk'in `boot.img` aracılığıyla kullanışlı ve kolay kurulum yöntemini ve KernelSU'nun güçlü kernel yamalama yeteneklerini birleştirir.
+HyperSU, Magisk veya KernelSU benzeri ve her ikisinin de en iyi yönlerini birleştiren bir root çözümdür. Magisk'in `boot.img` aracılığıyla kullanışlı ve kolay kurulum yöntemini ve KernelSU'nun güçlü kernel yamalama yeteneklerini birleştirir.
 
-## APatch ve Magisk arasındaki fark nedir?
+## HyperSU ve Magisk arasındaki fark nedir?
 
-- Magisk başlangıç sistemini kernel'in ramdisk'indeki bir yama ile değiştirirken; APatch kernel'i doğrudan yamalar.
+- Magisk başlangıç sistemini kernel'in ramdisk'indeki bir yama ile değiştirirken; HyperSU kernel'i doğrudan yamalar.
 
-## APatch vs KernelSU
+## HyperSU vs KernelSU
 
-- KernelSU, cihazınızın kernel'i için her zaman OEM tarafından sağlanmayan kaynak kodunu gerektirir. APatch yalnızca stok `boot.img` dosyanızla çalışır.
+- KernelSU, cihazınızın kernel'i için her zaman OEM tarafından sağlanmayan kaynak kodunu gerektirir. HyperSU yalnızca stok `boot.img` dosyanızla çalışır.
 
-## APatch vs Magisk, KernelSU
+## HyperSU vs Magisk, KernelSU
 
 - İsteğe bağlı olarak SELinux'u değiştirmez. Bu şu anlama gelir; android uygulama parçacığının root'lanması için libsu ve IPC'ye gerek yoktur.
 - **Kernel Patch (Yama) Modülü** sağlanır.
@@ -25,9 +25,9 @@ Ek olarak KPM, kernel sviyesinde satır içi kanca, sistem çağrısı-tablo kan
 
 Daha fazla bilgi için bkz [KPM nasıl yazılır?](https://github.com/bmax121/KernelPatch/blob/main/doc/module.md)
 
-## APatch and KernelPatch arasındaki ilişki
+## HyperSU and KernelPatch arasındaki ilişki
 
-APatch, KernelPatch'e dayalıdır; onun tüm yeteneklerini devralır ve onu daha da geliştirmiştir.
+HyperSU, KernelPatch'e dayalıdır; onun tüm yeteneklerini devralır ve onu daha da geliştirmiştir.
 
 Yalnızca KernelPatch'i kurabilirsiniz ancak bu magisk modüllerini kullanmanıza izin vermez,
 Superuser yönetimini kullanmak için de AndroidPatch'i yüklemeniz ve ardından kaldırmanız gerekir.
@@ -43,4 +43,4 @@ SuperCall yalnızca Süper Anahtar doğru olduğunda başarılı bir şekilde ç
 ## Peki ya SELinux?
 
 - KernelPatch, SELinux içeriğini değiştirmez ve SELinux'u kanca yoluyla atlamaz. Bu, yeni bir işlem başlatmak ve ardından IPC gerçekleştirmek için libsu kullanmanıza gerek kalmadan, uygulama bağlamında bir Android iş parçacığını rootlamanıza olanak tanır. Bu çok kullanışlıdır.
-- Ayrıca APatch, ek SELinux desteği sağlamak için doğrudan magiskpolicy'yi kullanır.
+- Ayrıca HyperSU, ek SELinux desteği sağlamak için doğrudan magiskpolicy'yi kullanır.

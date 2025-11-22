@@ -1,21 +1,21 @@
 # 〈常見問題集〉
 
 
-## 什麼是 APatch？
-APatch 為一套汲取 Magisk、KernelSU 優勢於一身的 Root 解決方案。
+## 什麼是 HyperSU？
+HyperSU 為一套汲取 Magisk、KernelSU 優勢於一身的 Root 解決方案。
 不僅保留 Magisk 自身便捷、修補 `boot.img` 即用的特性，也有 KernelSU 強大的核心修補功能。
 
 
-## APatch 與 Magisk 的差別為何？
-- Magisk 會先調用 boot 修補鏡像的 ramdisk，再修改 init 系統；APatch 則經由修補鏡像，直接修改核心本身。
+## HyperSU 與 Magisk 的差別為何？
+- Magisk 會先調用 boot 修補鏡像的 ramdisk，再修改 init 系統；HyperSU 則經由修補鏡像，直接修改核心本身。
 
 
-## APatch vs KernelSU
-- KernelSU 依託 OEM 廠商提供的裝置核心原始碼，但並非每間廠商都會提供；而 APatch 只需修補原廠 `boot.img`。
+## HyperSU vs KernelSU
+- KernelSU 依託 OEM 廠商提供的裝置核心原始碼，但並非每間廠商都會提供；而 HyperSU 只需修補原廠 `boot.img`。
 
 
-## APatch vs Magisk、KernelSU
-- APatch 可選擇不修改 SELinux，但仍讓應用程式執行緒調用 Root 權限。過程不需要 libsu 以及 IPC。
+## HyperSU vs Magisk、KernelSU
+- HyperSU 可選擇不修改 SELinux，但仍讓應用程式執行緒調用 Root 權限。過程不需要 libsu 以及 IPC。
 - 支援**核心修補模組**。
 
 
@@ -27,9 +27,9 @@ APatch 為一套汲取 Magisk、KernelSU 優勢於一身的 Root 解決方案。
 更多詳情，請參閱[〈如何編寫核心修補模組？〉](https://github.com/bmax121/KernelPatch/blob/main/doc/module.md)（英語）。
 
 
-## APatch 和 KernelPatch 的關係
+## HyperSU 和 KernelPatch 的關係
 
-APatch 基於 KernelPatch。繼承 KernelPatch 特性的基礎之上，新增更多功能。
+HyperSU 基於 KernelPatch。繼承 KernelPatch 特性的基礎之上，新增更多功能。
 
 你也能選擇只安裝 KernelPatch，但這樣就沒辦法使用 Magisk 模組，且包括管理超級使用者權限在內的功能，你都必須解除安裝 KernelPatch 後再安裝 AndroidPatch。
 
@@ -45,4 +45,4 @@ APatch 基於 KernelPatch。繼承 KernelPatch 特性的基礎之上，新增更
 - KernelPatch 不修改 SELinux 內容，而是使用 Hook 忽略 SELinux 層；
   換句話說，應用程式內的 Android 執行緒可直接調用 Root 權限，而不用經過讓 libsu 新增運算排程、安排 IPC 等步驟。
   可謂事半功倍。
-- 此外，由於 APatch 使用了 magiskpolicy，使你能有額外的 SELinux 支援。
+- 此外，由於 HyperSU 使用了 magiskpolicy，使你能有額外的 SELinux 支援。
