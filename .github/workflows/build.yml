@@ -75,6 +75,14 @@ jobs:
           echo 'android.native.buildOutput=verbose' >> gradle.properties
           sed -i 's/org.gradle.configuration-cache=true//g' gradle.properties
           ./gradlew clean assembleRelease
+
+          # ��ӡ���ɵ� APK ·�������ڵ��Ժ�ȷ��
+          echo "Searching for generated APK in app/build/outputs/apk/release/"
+          APK_PATH=$(find app/build/outputs/apk/release -name "*.apk" | head -n 1)
+          echo "Found APK at: $APK_PATH"
+          echo "APK_PATH=$APK_PATH" >> $GITHUB_ENV
+
+          # ͬʱ���������߰汾��¼����
           echo "BUILD_TOOL_VERSION=$(ls /usr/local/lib/android/sdk/build-tools/ | tail -n 1)" >> $GITHUB_ENV
 
       - name: Sign Release
@@ -93,17 +101,32 @@ jobs:
           keyPassword: ${{ secrets.KEY_PASSWORD }}
           zipAlign: true
 
-      - name: Upload build artifact
-        env:
-          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+      - name: Debug - Show Signed APK Path
         if: ${{ env.SIGNING_KEY != '' }}
+        run: |
+          SIGNED_APK_PATH=$(find app/build/outputs/apk/release -name "*.apk" | grep -i signed | head -n 1)
+          echo "Signed APK is expected at: $SIGNED_APK_PATH"
+          echo "SIGNED_APK_PATH=$SIGNED_APK_PATH" >> $GITHUB_ENV
+
+      - name: Upload Unsigned APK Artifact
+        if: always()
         uses: actions/upload-artifact@v5
         with:
-          name: HyperSU
-          path: ${{steps.sign_app.outputs.signedReleaseFile}}
+          name: HyperSU-Unsigned-APK
+          path: app/build/outputs/apk/release/*.apk
+        # �ϴ�����δǩ���� APK �ļ�
 
-      - name: Post to channel
-        if: ${{github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && github.ref_type != 'tag'}}
+      - name: Upload Signed APK Artifact
+        if: env.SIGNING_KEY != '' && always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: HyperSU-Signed-APK
+          path: app/build/outputs/apk/release/*.apk
+        # ���߸���ȷ�ز���ǩ���� APK������� 'signed' ���ļ���
+        # ����ʵ���������·��
+
+      - name: Post to Telegram channel (on main branch push, not tag)
+        if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && github.ref_type != 'tag' }}
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
@@ -111,15 +134,24 @@ jobs:
           COMMIT_ID: ${{ github.event.head_commit.id }}
         run: |
           if [ ! -z "${{ secrets.BOT_TOKEN }}" ]; then
-            OUTPUT="app/build/outputs/apk/release"
-            export Release=$(find $OUTPUT -name "*.apk")
-            URL=$(python3 .github/scripts/telegram_url.py -1002058433411)
-            curl -v "$URL" -F Release=@${{ steps.sign_app.outputs.signedReleaseFile }}
-            URL=$(python3 .github/scripts/telegram_url.py -1001910818234)
-            curl -v "$URL" -F Release=@${{ steps.sign_app.outputs.signedReleaseFile }}
+            # ����ǩ����� APK ���� sign_app �������ɣ���ͨ�� outputs �ṩ·��
+            SIGNED_APK="${{ steps.sign_app.outputs.signedReleaseFile }}"
+            if [ -z "$SIGNED_APK" ] || [ ! -f "$SIGNED_APK" ]; then
+              # ���δͨ�� sign_app������ֱ�Ӵ� release Ŀ¼�����µ� APK
+              SIGNED_APK=$(find app/build/outputs/apk/release -name "*.apk" | grep -i signed | head -n 1)
+            fi
+            if [ -f "$SIGNED_APK" ]; then
+              echo "Uploading APK to Telegram: $SIGNED_APK"
+              URL=$(python3 .github/scripts/telegram_url.py -1002058433411)
+              curl -v "$URL" -F Release=@"$SIGNED_APK"
+              URL=$(python3 .github/scripts/telegram_url.py -1001910818234)
+              curl -v "$URL" -F Release=@"$SIGNED_APK"
+            else
+              echo "? No signed APK found to upload to Telegram."
+            fi
           fi
 
-      - name: Release apk
+      - name: Release APK (on tag push)
         env:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
         if: ${{ env.SIGNING_KEY != '' && github.ref_type == 'tag' }}
@@ -128,7 +160,7 @@ jobs:
         with:
           token: ${{ github.token }}
           tag: ${{ steps.parse_version.outputs.VERSION }}
-          artifacts: ${{steps.sign_app.outputs.signedReleaseFile}}
+          artifacts: ${{ steps.sign_app.outputs.signedReleaseFile }}
           generateReleaseNotes: true
           makeLatest: true
           replacesArtifacts: true
