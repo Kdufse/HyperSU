@@ -1,4 +1,4 @@
-package me.kdufse.hypersu
+package me.bmax.apatch
 
 import android.os.Parcelable
 import androidx.annotation.Keep

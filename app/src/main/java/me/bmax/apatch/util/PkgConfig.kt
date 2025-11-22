@@ -1,12 +1,12 @@
-package me.kdufse.hypersu.util
+package me.bmax.apatch.util
 
 import android.os.Parcelable
 import android.util.Log
 import androidx.annotation.Keep
 import androidx.compose.runtime.Immutable
 import kotlinx.parcelize.Parcelize
-import me.kdufse.hypersu.APApplication
-import me.kdufse.hypersu.Natives
+import me.bmax.apatch.APApplication
+import me.bmax.apatch.Natives
 import java.io.File
 import java.io.FileWriter
 import kotlin.concurrent.thread

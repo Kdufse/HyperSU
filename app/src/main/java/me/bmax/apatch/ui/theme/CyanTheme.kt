@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.theme
+package me.bmax.apatch.ui.theme
 
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme

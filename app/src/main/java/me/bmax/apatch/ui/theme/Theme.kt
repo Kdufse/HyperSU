@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.theme
+package me.bmax.apatch.ui.theme
 
 import android.os.Build
 import androidx.activity.ComponentActivity
@@ -19,7 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.MutableLiveData
-import me.kdufse.hypersu.APApplication
+import me.bmax.apatch.APApplication
 
 @Composable
 private fun SystemBarStyle(

@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.component
+package me.bmax.apatch.ui.component
 
 import androidx.compose.foundation.shape.CornerBasedShape
 import androidx.compose.foundation.shape.RoundedCornerShape

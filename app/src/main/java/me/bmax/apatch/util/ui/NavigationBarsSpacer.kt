@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.util.ui
+package me.bmax.apatch.util.ui
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Spacer

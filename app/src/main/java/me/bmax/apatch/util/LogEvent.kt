@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.util
+package me.bmax.apatch.util
 
 import android.content.Context
 import android.os.Build

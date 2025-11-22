@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.viewmodel
+package me.bmax.apatch.ui.viewmodel
 
 import android.content.ContentValues
 import android.content.Context
@@ -22,17 +22,17 @@ import com.topjohnwu.superuser.nio.ExtendedFile
 import com.topjohnwu.superuser.nio.FileSystemManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import me.kdufse.hypersu.APApplication
-import me.kdufse.hypersu.BuildConfig
-import me.kdufse.hypersu.R
-import me.kdufse.hypersu.apApp
-import me.kdufse.hypersu.util.Version
-import me.kdufse.hypersu.util.copyAndClose
-import me.kdufse.hypersu.util.copyAndCloseOut
-import me.kdufse.hypersu.util.createRootShell
-import me.kdufse.hypersu.util.inputStream
-import me.kdufse.hypersu.util.shellForResult
-import me.kdufse.hypersu.util.writeTo
+import me.bmax.apatch.APApplication
+import me.bmax.apatch.BuildConfig
+import me.bmax.apatch.R
+import me.bmax.apatch.apApp
+import me.bmax.apatch.util.Version
+import me.bmax.apatch.util.copyAndClose
+import me.bmax.apatch.util.copyAndCloseOut
+import me.bmax.apatch.util.createRootShell
+import me.bmax.apatch.util.inputStream
+import me.bmax.apatch.util.shellForResult
+import me.bmax.apatch.util.writeTo
 import org.ini4j.Ini
 import java.io.BufferedReader
 import java.io.File

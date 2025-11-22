@@ -1,10 +1,10 @@
-package me.kdufse.hypersu.util
+package me.bmax.apatch.util
 
 import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import com.topjohnwu.superuser.Shell
-import me.kdufse.hypersu.R
+import me.bmax.apatch.R
 
 @Composable
 fun getSELinuxStatus(): String {

@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.util.ui
+package me.bmax.apatch.util.ui
 
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint

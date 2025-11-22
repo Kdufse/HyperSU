@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.screen
+package me.bmax.apatch.ui.screen
 
 import android.os.Build
 import android.system.Os
@@ -88,20 +88,20 @@ import com.ramcosta.composedestinations.generated.destinations.PatchesDestinatio
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import me.kdufse.hypersu.APApplication
-import me.kdufse.hypersu.Natives
-import me.kdufse.hypersu.R
-import me.kdufse.hypersu.apApp
-import me.kdufse.hypersu.ui.component.ProvideMenuShape
-import me.kdufse.hypersu.ui.component.rememberConfirmDialog
-import me.kdufse.hypersu.ui.viewmodel.PatchesViewModel
-import me.kdufse.hypersu.util.LatestVersionInfo
-import me.kdufse.hypersu.util.Version
-import me.kdufse.hypersu.util.Version.getManagerVersion
-import me.kdufse.hypersu.util.checkNewVersion
-import me.kdufse.hypersu.util.getSELinuxStatus
-import me.kdufse.hypersu.util.reboot
-import me.kdufse.hypersu.util.ui.APDialogBlurBehindUtils
+import me.bmax.apatch.APApplication
+import me.bmax.apatch.Natives
+import me.bmax.apatch.R
+import me.bmax.apatch.apApp
+import me.bmax.apatch.ui.component.ProvideMenuShape
+import me.bmax.apatch.ui.component.rememberConfirmDialog
+import me.bmax.apatch.ui.viewmodel.PatchesViewModel
+import me.bmax.apatch.util.LatestVersionInfo
+import me.bmax.apatch.util.Version
+import me.bmax.apatch.util.Version.getManagerVersion
+import me.bmax.apatch.util.checkNewVersion
+import me.bmax.apatch.util.getSELinuxStatus
+import me.bmax.apatch.util.reboot
+import me.bmax.apatch.util.ui.APDialogBlurBehindUtils
 
 private val managerVersion = getManagerVersion()
 

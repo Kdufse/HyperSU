@@ -1,8 +1,8 @@
-package me.kdufse.hypersu.util
+package me.bmax.apatch.util
 
 import android.content.ContentResolver
 import android.net.Uri
-import me.kdufse.hypersu.apApp
+import me.bmax.apatch.apApp
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.InputStream

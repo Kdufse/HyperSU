@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.util.ui
+package me.bmax.apatch.util.ui
 
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.material3.MaterialTheme

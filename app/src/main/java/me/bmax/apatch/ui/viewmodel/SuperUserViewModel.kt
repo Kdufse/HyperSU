@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.viewmodel
+package me.bmax.apatch.ui.viewmodel
 
 import android.content.ComponentName
 import android.content.Intent
@@ -17,13 +17,13 @@ import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.parcelize.Parcelize
-import me.kdufse.hypersu.IAPRootService
-import me.kdufse.hypersu.Natives
-import me.kdufse.hypersu.apApp
-import me.kdufse.hypersu.services.RootServices
-import me.kdufse.hypersu.util.APatchCli
-import me.kdufse.hypersu.util.HanziToPinyin
-import me.kdufse.hypersu.util.PkgConfig
+import me.bmax.apatch.IAPRootService
+import me.bmax.apatch.Natives
+import me.bmax.apatch.apApp
+import me.bmax.apatch.services.RootServices
+import me.bmax.apatch.util.APatchCli
+import me.bmax.apatch.util.HanziToPinyin
+import me.bmax.apatch.util.PkgConfig
 import java.text.Collator
 import java.util.Locale
 import kotlin.concurrent.thread

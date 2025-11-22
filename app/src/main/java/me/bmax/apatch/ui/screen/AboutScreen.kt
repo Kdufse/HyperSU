@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.screen
+package me.bmax.apatch.ui.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -40,9 +40,9 @@ import androidx.lifecycle.compose.dropUnlessResumed
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootGraph
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
-import me.kdufse.hypersu.BuildConfig
-import me.kdufse.hypersu.R
-import me.kdufse.hypersu.util.Version
+import me.bmax.apatch.BuildConfig
+import me.bmax.apatch.R
+import me.bmax.apatch.util.Version
 
 @Destination<RootGraph>
 @Composable

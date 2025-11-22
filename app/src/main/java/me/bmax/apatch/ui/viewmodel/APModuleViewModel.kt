@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.viewmodel
+package me.bmax.apatch.ui.viewmodel
 
 import android.os.SystemClock
 import android.util.Log
@@ -10,8 +10,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import me.kdufse.hypersu.apApp
-import me.kdufse.hypersu.util.listModules
+import me.bmax.apatch.apApp
+import me.bmax.apatch.util.listModules
 import org.json.JSONArray
 import org.json.JSONObject
 import java.text.Collator

@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.component
+package me.bmax.apatch.ui.component
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
@@ -19,7 +19,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import me.kdufse.hypersu.R
+import me.bmax.apatch.R
 
 @Composable
 fun ModuleUpdateButton(

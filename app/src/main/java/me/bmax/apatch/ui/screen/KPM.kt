@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.screen
+package me.bmax.apatch.ui.screen
 
 import android.app.Activity.RESULT_OK
 import android.content.Intent
@@ -80,22 +80,22 @@ import com.topjohnwu.superuser.nio.FileSystemManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.kdufse.hypersu.APApplication
-import me.kdufse.hypersu.Natives
-import me.kdufse.hypersu.R
-import me.kdufse.hypersu.apApp
-import me.kdufse.hypersu.ui.component.ConfirmResult
-import me.kdufse.hypersu.ui.component.KPModuleRemoveButton
-import me.kdufse.hypersu.ui.component.LoadingDialogHandle
-import me.kdufse.hypersu.ui.component.ProvideMenuShape
-import me.kdufse.hypersu.ui.component.rememberConfirmDialog
-import me.kdufse.hypersu.ui.component.rememberLoadingDialog
-import me.kdufse.hypersu.ui.viewmodel.KPModel
-import me.kdufse.hypersu.ui.viewmodel.KPModuleViewModel
-import me.kdufse.hypersu.ui.viewmodel.PatchesViewModel
-import me.kdufse.hypersu.util.inputStream
-import me.kdufse.hypersu.util.ui.APDialogBlurBehindUtils
-import me.kdufse.hypersu.util.writeTo
+import me.bmax.apatch.APApplication
+import me.bmax.apatch.Natives
+import me.bmax.apatch.R
+import me.bmax.apatch.apApp
+import me.bmax.apatch.ui.component.ConfirmResult
+import me.bmax.apatch.ui.component.KPModuleRemoveButton
+import me.bmax.apatch.ui.component.LoadingDialogHandle
+import me.bmax.apatch.ui.component.ProvideMenuShape
+import me.bmax.apatch.ui.component.rememberConfirmDialog
+import me.bmax.apatch.ui.component.rememberLoadingDialog
+import me.bmax.apatch.ui.viewmodel.KPModel
+import me.bmax.apatch.ui.viewmodel.KPModuleViewModel
+import me.bmax.apatch.ui.viewmodel.PatchesViewModel
+import me.bmax.apatch.util.inputStream
+import me.bmax.apatch.util.ui.APDialogBlurBehindUtils
+import me.bmax.apatch.util.writeTo
 import java.io.IOException
 
 private const val TAG = "KernelPatchModule"

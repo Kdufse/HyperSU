@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.screen
+package me.bmax.apatch.ui.screen
 
 import android.os.Environment
 import androidx.compose.foundation.layout.Column
@@ -37,10 +37,10 @@ import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.kdufse.hypersu.R
-import me.kdufse.hypersu.ui.component.KeyEventBlocker
-import me.kdufse.hypersu.util.runAPModuleAction
-import me.kdufse.hypersu.util.ui.LocalSnackbarHost
+import me.bmax.apatch.R
+import me.bmax.apatch.ui.component.KeyEventBlocker
+import me.bmax.apatch.util.runAPModuleAction
+import me.bmax.apatch.util.ui.LocalSnackbarHost
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date

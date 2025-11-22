@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui
+package me.bmax.apatch.ui
 
 import android.annotation.SuppressLint
 import android.os.Build
@@ -45,10 +45,10 @@ import com.ramcosta.composedestinations.generated.NavGraphs
 import com.ramcosta.composedestinations.rememberNavHostEngine
 import com.ramcosta.composedestinations.utils.isRouteOnBackStackAsState
 import com.ramcosta.composedestinations.utils.rememberDestinationsNavigator
-import me.kdufse.hypersu.APApplication
-import me.kdufse.hypersu.ui.screen.BottomBarDestination
-import me.kdufse.hypersu.ui.theme.APatchTheme
-import me.kdufse.hypersu.util.ui.LocalSnackbarHost
+import me.bmax.apatch.APApplication
+import me.bmax.apatch.ui.screen.BottomBarDestination
+import me.bmax.apatch.ui.theme.APatchTheme
+import me.bmax.apatch.util.ui.LocalSnackbarHost
 import me.zhanghai.android.appiconloader.coil.AppIconFetcher
 import me.zhanghai.android.appiconloader.coil.AppIconKeyer
 

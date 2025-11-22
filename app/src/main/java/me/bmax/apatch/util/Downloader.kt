@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.util
+package me.bmax.apatch.util
 
 import android.annotation.SuppressLint
 import android.app.DownloadManager
@@ -11,7 +11,7 @@ import android.os.Build
 import android.os.Environment
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
-import me.kdufse.hypersu.apApp
+import me.bmax.apatch.apApp
 import androidx.core.content.ContextCompat
 
 @SuppressLint("Range")

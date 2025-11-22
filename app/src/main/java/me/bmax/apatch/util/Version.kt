@@ -1,15 +1,15 @@
-package me.kdufse.hypersu.util
+package me.bmax.apatch.util
 
 import android.util.Log
 import androidx.core.content.pm.PackageInfoCompat
-import me.kdufse.hypersu.APApplication
-import me.kdufse.hypersu.BuildConfig
-import me.kdufse.hypersu.Natives
-import me.kdufse.hypersu.apApp
-import me.kdufse.hypersu.util.shellForResult
+import me.bmax.apatch.APApplication
+import me.bmax.apatch.BuildConfig
+import me.bmax.apatch.Natives
+import me.bmax.apatch.apApp
+import me.bmax.apatch.util.shellForResult
 import org.ini4j.Ini
 import java.io.StringReader
-import me.kdufse.hypersu.ui.viewmodel.KPModel
+import me.bmax.apatch.ui.viewmodel.KPModel
 import com.topjohnwu.superuser.nio.ExtendedFile
 import com.topjohnwu.superuser.nio.FileSystemManager
 import com.topjohnwu.superuser.Shell

@@ -1,4 +1,4 @@
-package me.kdufse.hypersu
+package me.bmax.apatch
 
 import android.app.Application
 import android.content.Context
@@ -12,13 +12,13 @@ import androidx.core.net.toUri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.topjohnwu.superuser.CallbackList
-import me.kdufse.hypersu.ui.CrashHandleActivity
-import me.kdufse.hypersu.util.APatchCli
-import me.kdufse.hypersu.util.APatchKeyHelper
-import me.kdufse.hypersu.util.Version
-import me.kdufse.hypersu.util.getRootShell
-import me.kdufse.hypersu.util.rootShellForResult
-import me.kdufse.hypersu.util.verifyAppSignature
+import me.bmax.apatch.ui.CrashHandleActivity
+import me.bmax.apatch.util.APatchCli
+import me.bmax.apatch.util.APatchKeyHelper
+import me.bmax.apatch.util.Version
+import me.bmax.apatch.util.getRootShell
+import me.bmax.apatch.util.rootShellForResult
+import me.bmax.apatch.util.verifyAppSignature
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import java.io.File

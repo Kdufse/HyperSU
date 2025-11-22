@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.component
+package me.bmax.apatch.ui.component
 
 import androidx.compose.foundation.focusable
 import androidx.compose.foundation.layout.Box

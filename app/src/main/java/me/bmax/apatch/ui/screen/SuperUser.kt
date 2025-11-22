@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.screen
+package me.bmax.apatch.ui.screen
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
@@ -50,14 +50,14 @@ import coil.request.ImageRequest
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootGraph
 import kotlinx.coroutines.launch
-import me.kdufse.hypersu.APApplication
-import me.kdufse.hypersu.Natives
-import me.kdufse.hypersu.R
-import me.kdufse.hypersu.ui.component.ProvideMenuShape
-import me.kdufse.hypersu.ui.component.SearchAppBar
-import me.kdufse.hypersu.ui.component.SwitchItem
-import me.kdufse.hypersu.ui.viewmodel.SuperUserViewModel
-import me.kdufse.hypersu.util.PkgConfig
+import me.bmax.apatch.APApplication
+import me.bmax.apatch.Natives
+import me.bmax.apatch.R
+import me.bmax.apatch.ui.component.ProvideMenuShape
+import me.bmax.apatch.ui.component.SearchAppBar
+import me.bmax.apatch.ui.component.SwitchItem
+import me.bmax.apatch.ui.viewmodel.SuperUserViewModel
+import me.bmax.apatch.util.PkgConfig
 
 
 @OptIn(ExperimentalMaterialApi::class, ExperimentalMaterial3Api::class)

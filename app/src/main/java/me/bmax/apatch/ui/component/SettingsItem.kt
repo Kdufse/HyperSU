@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.component
+package me.bmax.apatch.ui.component
 
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.interaction.MutableInteractionSource

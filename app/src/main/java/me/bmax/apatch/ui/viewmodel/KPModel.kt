@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.viewmodel
+package me.bmax.apatch.ui.viewmodel
 
 import android.os.Parcelable
 import androidx.annotation.Keep

@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.component
+package me.bmax.apatch.ui.component
 
 import android.util.Log
 import androidx.activity.compose.BackHandler

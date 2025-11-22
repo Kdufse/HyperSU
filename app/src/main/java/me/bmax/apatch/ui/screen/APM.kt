@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.ui.screen
+package me.bmax.apatch.ui.screen
 
 import android.app.Activity.RESULT_OK
 import android.content.Context
@@ -75,24 +75,24 @@ import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.kdufse.hypersu.APApplication
-import me.kdufse.hypersu.R
-import me.kdufse.hypersu.apApp
-import me.kdufse.hypersu.ui.WebUIActivity
-import me.kdufse.hypersu.ui.component.ConfirmResult
-import me.kdufse.hypersu.ui.component.ModuleRemoveButton
-import me.kdufse.hypersu.ui.component.ModuleStateIndicator
-import me.kdufse.hypersu.ui.component.ModuleUpdateButton
-import me.kdufse.hypersu.ui.component.rememberConfirmDialog
-import me.kdufse.hypersu.ui.component.rememberLoadingDialog
-import me.kdufse.hypersu.ui.viewmodel.APModuleViewModel
-import me.kdufse.hypersu.util.DownloadListener
-import me.kdufse.hypersu.util.download
-import me.kdufse.hypersu.util.hasMagisk
-import me.kdufse.hypersu.util.reboot
-import me.kdufse.hypersu.util.toggleModule
-import me.kdufse.hypersu.util.ui.LocalSnackbarHost
-import me.kdufse.hypersu.util.uninstallModule
+import me.bmax.apatch.APApplication
+import me.bmax.apatch.R
+import me.bmax.apatch.apApp
+import me.bmax.apatch.ui.WebUIActivity
+import me.bmax.apatch.ui.component.ConfirmResult
+import me.bmax.apatch.ui.component.ModuleRemoveButton
+import me.bmax.apatch.ui.component.ModuleStateIndicator
+import me.bmax.apatch.ui.component.ModuleUpdateButton
+import me.bmax.apatch.ui.component.rememberConfirmDialog
+import me.bmax.apatch.ui.component.rememberLoadingDialog
+import me.bmax.apatch.ui.viewmodel.APModuleViewModel
+import me.bmax.apatch.util.DownloadListener
+import me.bmax.apatch.util.download
+import me.bmax.apatch.util.hasMagisk
+import me.bmax.apatch.util.reboot
+import me.bmax.apatch.util.toggleModule
+import me.bmax.apatch.util.ui.LocalSnackbarHost
+import me.bmax.apatch.util.uninstallModule
 
 @Destination<RootGraph>
 @Composable

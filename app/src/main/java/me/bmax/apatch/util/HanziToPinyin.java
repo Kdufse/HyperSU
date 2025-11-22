@@ -1,4 +1,4 @@
-package me.kdufse.hypersu.util;
+package me.bmax.apatch.util;
 /*
  * Copyright (C) 2009 The Android Open Source Project
  *
