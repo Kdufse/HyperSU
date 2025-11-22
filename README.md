@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://github.com/bmax121/HyperSU/releases/latest"><img src="https://images.weserv.nl/?url=https://raw.githubusercontent.com/bmax121/HyperSU/main/app/src/main/ic_launcher-playstore.png&mask=circle" style="width: 128px;" alt="logo"></a>
+<a href="https://github.com/Kdufse/HyperSU/releases/latest"><img src="https://images.weserv.nl/?url=https://raw.githubusercontent.com/Kdufse/HyperSU/main/app/src/main/ic_launcher-playstore.png&mask=circle" style="width: 128px;" alt="logo"></a>
 
 <h1 align="center">HyperSU</h1>
 
