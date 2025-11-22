@@ -1,5 +1,5 @@
 // IAPRootService.aidl
-package me.kdufse.hypersu;
+package me.bmax.apatch;
 
 import android.content.pm.PackageInfo;
 import rikka.parcelablelist.ParcelableListSlice;
